@@ -25,7 +25,7 @@ createList () {
   symList1 = [];
 
   for (int i=0; i<1000; i++) {
-    symList1.add({"AAA" + i.toString() : double.parse((Random().nextDouble() * (10.00 - 1.00 + 1.00) + 1.00).toStringAsFixed(2))});
+    symList1.add({"A" + i.toString() : double.parse((Random().nextDouble() * (10.00 - 1.00 + 1.00) + 1.00).toStringAsFixed(2))});
   }
 }
 
@@ -58,11 +58,12 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
       setState(() {});
       // Do whatever you want based on the tab index
     });
-    Timer.periodic(const Duration(milliseconds: 200), (timer) {
-      setState(() {
-        createList();
-      });
-    });
+    createList();
+    // Timer.periodic(const Duration(milliseconds: 200), (timer) {
+    //   setState(() {
+    //
+    //   });
+    // });
     super.initState();
   }
 
@@ -125,23 +126,20 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
   Widget watchList() {
     return GridView.builder(
       itemCount: symList1.length,
-      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2, childAspectRatio: 1.5),
+      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 13, childAspectRatio: 1.5),
       itemBuilder: (BuildContext context, int index) {
-        return GridView.count(
-          crossAxisCount: 1,
-          childAspectRatio: 1.5,
-          shrinkWrap: true,
-          scrollDirection: Axis.vertical,
-          physics: ScrollPhysics(),
-          children: <Widget>[
-            Padding(
-              padding: const EdgeInsets.fromLTRB(0, 40, 0, 40),
-              child: Column(
-                children: [
-                  Text(symList1[index].keys.first),
-                  Text(symList1[index].values.first.toStringAsFixed(2)),
-                ],
-              ),
+        return Flex(
+          direction: Axis.horizontal,
+          children: [
+            Expanded(
+                child: Column(
+                  children: [
+                    Text(symList1[index].keys.first,
+                      style: const TextStyle(fontSize: 7)),
+                    Text(symList1[index].values.first.toStringAsFixed(2),
+                      style: const TextStyle(fontSize: 7)),
+                  ],
+                )
             ),
           ],
         );
