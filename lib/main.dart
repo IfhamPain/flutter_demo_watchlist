@@ -79,15 +79,6 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
       home: DefaultTabController(
         length: 2,
         child: Scaffold(
-          appBar: AppBar(
-            backgroundColor: const Color(0xFFFFFFFF),
-            title: const Center(
-              child: Text(
-                "UA MOB Flutter",
-                style: TextStyle(color: Colors.black),
-              ),
-            ),
-          ),
           bottomNavigationBar: menu(),
           body: TabBarView(
             children: [
