@@ -32,7 +32,7 @@ class MyApp extends StatelessWidget {
 createList () {
   symList1 = [];
 
-  for (int i=0; i<100; i++) {
+  for (int i = 0; i<1000; i++) {
     symList1.add(DataRow());
   }
 }
@@ -43,7 +43,7 @@ updateList () {
       symList1[i].updateNum();
     }
   } else {
-    for (int i = 0; i < 100; i++) {
+    for (int i = 0; i < 1000; i++) {
       symList1.add(DataRow());
     }
   }
