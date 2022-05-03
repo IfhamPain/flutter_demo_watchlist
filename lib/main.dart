@@ -185,27 +185,27 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
             Padding(
               padding: const EdgeInsets.fromLTRB(20, 0, 42, 0),
               child: Text(symList1[index].symCode,
-                  style: const TextStyle(fontSize: 11)),
+                  style: const TextStyle(fontSize: 10)),
             ),
             Padding(
               padding: const EdgeInsets.fromLTRB(8, 0, 42, 0),
               child: Text(symList1[index].num1.toString(),
-                  style: TextStyle(fontSize: 11, color: symList1[index].num1 < 500 ? Colors.red : Colors.green)),
+                  style: TextStyle(fontSize: 10, color: symList1[index].num1 < 500 ? Colors.red : Colors.green)),
             ),
             Padding(
               padding: const EdgeInsets.fromLTRB(8, 0, 42, 0),
               child: Text(symList1[index].num2.toString(),
-                  style: TextStyle(fontSize: 11, color: symList1[index].num2 < 500 ? Colors.red : Colors.green)),
+                  style: TextStyle(fontSize: 10, color: symList1[index].num2 < 500 ? Colors.red : Colors.green)),
             ),
             Padding(
               padding: const EdgeInsets.fromLTRB(8, 0, 42, 0),
               child: Text(symList1[index].num3.toString(),
-                  style: TextStyle(fontSize: 11, color: symList1[index].num3 < 500 ? Colors.red : Colors.green)),
+                  style: TextStyle(fontSize: 10, color: symList1[index].num3 < 500 ? Colors.red : Colors.green)),
             ),
             Padding(
               padding: const EdgeInsets.fromLTRB(8, 0, 42, 0),
               child: Text(symList1[index].num4.toString(),
-                  style: TextStyle(fontSize: 11, color: symList1[index].num4 < 500 ? Colors.red : Colors.green)),
+                  style: TextStyle(fontSize: 10, color: symList1[index].num4 < 500 ? Colors.red : Colors.green)),
             ),
           ],
         );
